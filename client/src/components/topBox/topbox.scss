@@ -1,0 +1,29 @@
+.topbox{
+  h1{
+    margin-bottom: 20px;
+    
+  }
+
+  .list{
+    .listitems{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .product{
+        img{
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .productname{
+
+        }
+      }
+      .quantity{
+
+      }
+    }
+  }
+}
