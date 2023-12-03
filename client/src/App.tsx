@@ -3,35 +3,32 @@ import Login from "./pages/login/Login";
 
 import Home from "./pages/home/Home";
 import Users from "./pages/users/Users";
-import Inventory from "./pages/inventory/Inventory";
-import "./styles/global.scss"
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet
-} from "react-router-dom";
+import Products from "./pages/products/Products";
+import "./styles/global.scss";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
+import Product from "./pages/product/Product";
 
 function App() {
 
-  const Layout = () =>{
-    return(
+  const Layout = () => {
+    return (
       <div className="main">
-        <Navbar/>
-          <div className="container">
-            <div className="menuContainer">
-              <Menu/>
-            </div>
-            <div className="contentContainer">
-              <Outlet/>
-            </div>
+        <Navbar />
+        <div className="container">
+          <div className="menuContainer">
+            <Menu />
           </div>
-        <Footer/>
+          <div className="contentContainer">
+            <Outlet />
+          </div>
+        </div>
+        <Footer />
       </div>
-    )
-  }
+    );
+  };
 
   const router = createBrowserRouter([
     {
@@ -41,21 +38,25 @@ function App() {
         {
           path: "/",
           element: <Home />,
-        },  {
+        },
+        {
           path: "/users",
           element: <Users />,
-        },{
-          path: "/inventory",
-          element: <Inventory />,
-        }
-      ]
+        },
+        {
+          path: "/products",
+          element: <Products />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
+        },
+      ],
     },
     {
       path: "/login",
-      element: <Login/>
-    }
-
-
+      element: <Login />,
+    },
   ]);
 
   return <RouterProvider router={router}></RouterProvider>;

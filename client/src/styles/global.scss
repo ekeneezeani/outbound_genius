@@ -31,3 +31,8 @@ a {
   padding: 5px 20px;
   width: 100%;
 }
+
+.MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: none !important;
+}

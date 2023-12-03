@@ -1,5 +1,5 @@
 import "./topbox.scss"
-import {topSellingProduct} from "../../data"
+import {topSellingProduct, } from "../../data"
 
 const TopBox = () => {
   
