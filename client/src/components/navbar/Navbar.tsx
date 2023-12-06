@@ -8,9 +8,9 @@ const Navbar = () => {
         <span>Inventory System</span>
       </div>
       <div className="icons">
-        <img src="search.svg" alt="" />
-        <img src="app.svg" alt="" />
-        <img src="expand.svg" alt="" />
+        <img src="search.svg" className="icon" alt="" />
+        <img src="app.svg" className="icon"  alt="" />
+        <img src="expand.svg" className="icon"  alt="" />
         <div className="notifications">
           <img src="notifications.svg" alt="" />
           <span>1</span>
