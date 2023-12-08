@@ -1,17 +1,19 @@
 import { GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import DataTable from "../../components/dataTable/DataTable";
 import "./products.scss";
-import { products } from "../../data";
-import { useState } from "react";
+// import { products } from "../../data";
+import { useEffect, useState } from "react";
 import Add from "../../components/add/Add";
+import axios from "axios";
 
 
 
 const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
+  // { field: "id", headerName: "ID", width: 200 },
   {
     field: "image",
     headerName: "image",
+    type:"file",
     width: 100,
     renderCell: (params) => {
       return <img src={params.row.img || "./noavatar.png"} alt="" />;
@@ -57,6 +59,13 @@ const columns: GridColDef[] = [
 
 const Products = () => {
   const [open, setOpen] = useState(false);
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    axios.get("http://localhost:8080/getAllProducts").then((response) => {
+      setProducts(response.data)
+    })
+  }, [])
 
   return (
     <div className="products">
