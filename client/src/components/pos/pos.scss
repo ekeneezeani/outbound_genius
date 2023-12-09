@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+.pos{
+  color: $soft-color;
+  display: flex;
+  flex-direction: column;
+  
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $soft-color;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $soft-bg;
+    font-weight: bold;
+    align-items: center;
+
+    .monthFIlter {
+      font-weight: lighter;
+      font-size: 10px;
+    }
+  }
+  .details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .quantity{
+      padding-top: 20px;
+      font-size: 30px;
+      font-weight: bolder;
+      color:orange;
+    }
+  }
+}

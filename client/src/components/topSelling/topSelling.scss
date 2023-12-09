@@ -1,0 +1,57 @@
+@import "../../styles/variables.scss";
+.topSelling {
+  color: $soft-color;
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $soft-color;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $soft-bg;
+    font-weight: bold;
+    align-items: center;
+
+    .yearFilter {
+      font-weight: lighter;
+      font-size: 10px;
+    }
+  }
+
+  .products {
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    .product {
+      display: flex;
+      flex-direction: column;
+      border-left: 2px solid $soft-bg;
+      gap: 10px;
+      align-items: center;
+      img {
+        height: 100px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 20px;
+        width: 100px;
+      }
+
+      .productName{
+        font-weight: lighter;
+        font-size: 12px;
+      }
+      .quantity-grouping{
+        .quantity{
+          font-weight: bold;
+          padding: 10px;
+        }
+        .grouping{
+          color: grey
+        }
+      }
+    }
+
+  }
+}

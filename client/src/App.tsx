@@ -16,6 +16,7 @@ import Footer from "./components/footer/Footer";
 import Menu from "./components/menu/Menu";
 import Product from "./pages/product/Product";
 import { useAppSelector } from "./app/hooks";
+import NewDashboard from "./pages/home/NewDashboard";
 
 function App() {
   interface Props {
@@ -56,7 +57,7 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <NewDashboard />,
         },
         {
           path: "/users",

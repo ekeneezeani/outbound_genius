@@ -80,7 +80,7 @@ function Add(props: Props) {
         <h1>Add {props.slug}</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
           {props.columns
-            .filter((item) => item.field !== "id" && item.field !== "image")
+            .filter((item) => item.field !== "id" && item.field !== "image" && item.field !== "createdAt")
             .map((column) => (
               <div className="item">
                 <label>{column.headerName}</label>
@@ -100,7 +100,7 @@ function Add(props: Props) {
               onChange={(e) => setfile(e.target.files[0])}
             />
           </div>
-          <button>send</button>
+          <button disabled={uploadIsComplete !== null && uploadIsComplete < 100}>send</button>
         </form>
       </div>
     </div>
