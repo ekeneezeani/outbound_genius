@@ -25,10 +25,12 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.post("/addUser", (req: Request, res: Response) => {
-  addNewUser().then((data) => res.send(data));
+  console.log(req.body)
+  addNewUser(req.body).then((data) => res.send(data));
 });
 
 app.post("/addNewProduct", (req: Request, res: Response) => {
+
   addNewProduct(req.body).then((data) => res.send(data));
 });
 

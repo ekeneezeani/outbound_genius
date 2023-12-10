@@ -1,18 +1,30 @@
-import { doc, setDoc, collection, addDoc } from "firebase/firestore";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import {
+  doc,
+  setDoc,
+  collection,
+  addDoc,
+  serverTimestamp,
+} from "firebase/firestore";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { db, storage, auth } from "../../firestore";
 
-import { db, storage } from "../../firestore";
-
-export const addNewUser = async () => {
+export const addNewUser = async (data) => {
+  let returnValue;
   try {
-    // Add a new document in collection "cities"
-    const doc = await addDoc(collection(db, "cities"), {
-      name: "Tokyo",
-      country: "Japan",
+    const res = await createUserWithEmailAndPassword(
+      auth,
+      data.email,
+      data.password
+    );
+    returnValue = res
+    await setDoc(doc(db, "users", res.user.uid), {
+      ...data,
+      timeStamp: serverTimestamp(),
     });
-
-    return doc;
-  } catch (e) {
-    console.error("Error adding document: ", e);
+    
+  } catch (err) {
+    console.log(err);
   }
+
+  return returnValue.user.stsTokenManager.accessToken;
 };
