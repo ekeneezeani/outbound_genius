@@ -19,18 +19,18 @@ const SalesActivity = () => {
             </span>
             <span>Qty</span>
             <div className="status">
-              <FontAwesomeIcon icon={faMinusCircle} />
+              <FontAwesomeIcon icon={faMinusCircle} style={{color:"tomato"}}/>
               <span className="message">TO BE PACKED</span>
             </div>
           </div>
           <div className="activity">
             <span className="quantity" style={{ color: "teal" }}>
               {" "}
-              6{" "}
+              6
             </span>
             <span>Pkgs</span>
             <div className="status">
-              <FontAwesomeIcon icon={faCircleDot} />
+              <FontAwesomeIcon icon={faCircleDot} style={{color:"tomato"}}/>
               <span className="message">TO BE SHIPPED</span>
             </div>
           </div>
@@ -41,7 +41,7 @@ const SalesActivity = () => {
             </span>
             <span>Pkgs</span>
             <div className="status">
-              <FontAwesomeIcon icon={faMinusCircle} />
+              <FontAwesomeIcon icon={faMinusCircle} style={{color:"tomato"}}/>
               <span className="message">TO BE DELIVERED</span>
             </div>
           </div>
@@ -52,7 +52,7 @@ const SalesActivity = () => {
             </span>
             <span>Qty</span>
             <div className="status">
-              <FontAwesomeIcon icon={faCircleCheck} />
+              <FontAwesomeIcon icon={faCircleCheck} style={{color:"tomato"}}/>
               <span className="message">TO BE INVOICED</span>
             </div>
           </div>

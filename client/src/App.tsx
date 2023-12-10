@@ -17,6 +17,7 @@ import Menu from "./components/menu/Menu";
 import Product from "./pages/product/Product";
 import { useAppSelector } from "./app/hooks";
 import NewDashboard from "./pages/home/NewDashboard";
+import Signup from "./pages/signup/Signup";
 
 function App() {
   interface Props {
@@ -76,6 +77,10 @@ function App() {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
     },
   ]);
 

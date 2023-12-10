@@ -26,12 +26,13 @@
     }
     .chartData {
       display: flex;
-      flex: 2;
+      flex: 3;
       gap: 15px;
       flex-direction: column;
       margin-top: 10px;
 
       .lineItem {
+        width: 200px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

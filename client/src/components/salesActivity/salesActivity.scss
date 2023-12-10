@@ -1,6 +1,9 @@
 @import "../../styles//variables.scss";
 .salesActiviy {
   display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
 
   .line {
     border-right: 2px solid $soft-bg;
@@ -40,10 +43,10 @@
           font-size: 40px;
         }
         .status {
-          padding: 10px;
+          padding: 5px;
           .message {
-            font-size: 13px;
-            padding: 10px;
+            font-size: 10px;
+            padding: 5px;
             color: $soft-color;
             
           }

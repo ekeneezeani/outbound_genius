@@ -1,9 +1,11 @@
 @import "../../styles/variables.scss";
-.pos{
+
+.salesOrder{
   color: $soft-color;
   display: flex;
   flex-direction: column;
   
+
   .title {
     display: flex;
     flex-direction: row;
@@ -16,23 +18,10 @@
     border-bottom: 2px solid $soft-bg;
     font-weight: bold;
     align-items: center;
-
-    .monthFIlter {
-      font-weight: lighter;
-      font-size: 10px;
-    }
   }
-  .details{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
 
-    .quantity{
-      padding-top: 20px;
-      font-size: 30px;
-      font-weight: bolder;
-      color:orange;
-    }
+  .dataTable{
+    padding: 20px;
   }
+
 }

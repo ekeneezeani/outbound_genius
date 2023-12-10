@@ -1,6 +1,7 @@
 import PieChartBox from "../../components/piechartBox/PieChartBox";
 import Pos from "../../components/pos/Pos";
 import SalesActivity from "../../components/salesActivity/SalesActivity";
+import SalesOrder from "../../components/salesOrder/SalesOrder";
 import TopSelling from "../../components/topSelling/TopSelling";
 import "./newDashBoard.scss";
 
@@ -19,7 +20,9 @@ const NewDashboard = () => {
       <div className="box box4">
         <Pos />
       </div>
-      <div className="box box5">Box5</div>
+      <div className="box box5">
+        <SalesOrder />
+      </div>
     </div>
   );
 };

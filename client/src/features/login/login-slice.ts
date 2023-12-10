@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { useEffect } from "react";
+
 
 interface loginState {
   user: null | string;
