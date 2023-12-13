@@ -1,5 +1,7 @@
 @import "../../styles/variables.scss";
 
+@import "../../styles/responsive.scss";
+
 .pieChartBox {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,20 @@
   .chartInfo {
     display: flex;
     gap: 10px;
-
+    @include xl{
+      display: flex;
+      flex-direction: row;
+    }
+    @include lg{
+      display: flex;
+      flex-direction: row;
+    }
+    @include md{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .chart {
       height: 100%;
       width: 100%;

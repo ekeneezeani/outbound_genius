@@ -12,7 +12,7 @@ type Props = {
 
 function Add(props: Props) {
   const [data, setData] = useState({});
-  const [file, setfile] = useState<any>(null);
+  const [file, setfile] = useState<object | null>(null);
   const [uploadIsComplete, setUploadIsComplete] = useState<number | null>(null)
   // console.log(data);
 

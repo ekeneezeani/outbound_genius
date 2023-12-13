@@ -1,32 +1,57 @@
 @import "../../styles/variables.scss";
 
-.newDashboard{
+@import "../../styles/responsive.scss";
+
+.newDashboard {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 30px;
   grid-auto-rows: minmax(220px, auto);
+  grid-auto-flow: dense;
 
-  .box{
-    // border:2px solid $soft-bg ;
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .box1{
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .box {
+    // border: 2px solid $soft-bg;
+  }
+  .box1 {
     grid-row: span 1;
     grid-column: span 6;
+    @include xl {
+      grid-row: span 1;
+      grid-column: span 3;
+    }
   }
-  .box2{
+  .box2 {
+    grid-row: span 1;
+    grid-column: span 3;
+
+    @include xl {
+      grid-column: span 3;
+    }
+  }
+  .box3 {
     grid-row: span 1;
     grid-column: span 3;
   }
-  .box3{
-    grid-row: span 1;
-    grid-column: span 3;
-  }
-  .box4{
+  .box4 {
     grid-row: span 1;
     grid-column: span 2;
   }
-  .box5{
+  .box5 {
     grid-row: span 1;
     grid-column: span 4;
+  }
+  .secondRow{
+    display: flex;
+    flex-direction: row;
   }
 }

@@ -1,4 +1,5 @@
 @import "../../styles//variables.scss";
+@import "../../styles/responsive.scss";
 .salesActiviy {
   display: flex;
   width: 100%;
@@ -7,6 +8,19 @@
 
   .line {
     border-right: 2px solid $soft-bg;
+  }
+
+
+  @include xl{
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include lg{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md{
+    grid-template-columns: repeat(1, 1fr);
   }
   .activityInfo {
     display: flex;
@@ -24,7 +38,10 @@
       display: flex;
       flex-direction: row;
       gap: 30px;
-
+      @include xl{
+        display: flex;
+        justify-content: space-between;
+      }
       .activity {
         -webkit-box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.34);
         box-shadow: -1px -1px 5px 0px rgba(0, 0, 0, 0.34);
@@ -60,6 +77,9 @@
     gap: 20px;
     margin: 20px;
     padding-left: 50px;
+    @include xl{
+      padding-left: 5px;
+    }
     .title {
       font-size: 20px;
       color: $soft-color;
